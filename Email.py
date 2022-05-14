@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sys, os ,string, smtplib, ssl, re
+import sys, os, smtplib, ssl, re
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
