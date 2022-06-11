@@ -1,4 +1,4 @@
-import sys,os,smtplib,ssl,re
+import sys,os,platform,smtplib,ssl,re
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
@@ -140,9 +140,20 @@ def noAttach(server,user,path,subject,message):
     except KeyboardInterrupt:
         server.quit()
         sys.exit()
-
-
 regex = r'\b[A-Za-z0-9_.-]+@[A-Za-z.]+\.[A-Z|a-z]{2,}\b'
 if __name__ == "__main__":
+    if platform.system() == "Linux":
+        os.system("clear")
+    elif platform.system() == "Windows":
+        os.system("cls")
+    print(colored("""
+
+                                    ███████╗███╗   ███╗ █████╗ ██╗██╗
+                                    ██╔════╝████╗ ████║██╔══██╗██║██║
+                                    ███████╗██╔████╔██║███████║██║██║
+                                    ╚════██║██║╚██╔╝██║██╔══██║██║██║
+                                    ███████║██║ ╚═╝ ██║██║  ██║██║███████╗
+                                    ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
+    ""","yellow"))
     server,user = Login()
     Target(server,user)
