@@ -1,8 +1,9 @@
-# Email-Automation
+# Smail
 
-requirements: Linux,Python3x.
+#requirements: python3x
 
-Send multiple emails with or wiithout attachments.
+#Send multiple emails with or wiithout attachments
 
-configure your gmail account to use.
+#configure your gmail account to use
 
+#support login gmail and outlook
